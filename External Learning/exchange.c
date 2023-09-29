@@ -1,3 +1,9 @@
+/*
+	Author: Ryan Pitman
+	Description: A program illustrating swapping of variables in C
+	Date: 27/09/2023
+*/
+
 #include <stdio.h>
 
 int main()
