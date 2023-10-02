@@ -1,6 +1,6 @@
 /*
-	Author: Ryan Pitman
 	Description: A program demonstrating basic I/O in C
+	Author: Ryan Pitman
 	Date: 25/09/2023
 */
 
