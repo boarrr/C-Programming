@@ -29,7 +29,7 @@ int main()
 
 
   printf("The sum of integers 1 to 5 is: %d\n", sumInt);
-  printf("The average of the floats 1.0 to 2.0 is: %.2f\n", sumFloat / 10); // Average = Total / Count
+  printf("The average of the floats 1.0 to 2.0 is: %.2f\n", sumFloat / 11); // Average = Total / Count
 
   return 0;
 }
