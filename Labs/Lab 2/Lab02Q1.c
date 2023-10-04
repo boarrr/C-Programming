@@ -21,9 +21,9 @@ int main()
   }
   
   // Calculate the sum of the floats
-  for (int num = 10; num <= 20; num++) 
+  for (int i = 10; i <= 20; i++) 
   {
-    float additional = num / 10.0;
+    float additional = i / 10.0;
     sumFloat += additional;
   }
 
