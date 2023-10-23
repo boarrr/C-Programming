@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int var = 0;
   char my_char = ' ';

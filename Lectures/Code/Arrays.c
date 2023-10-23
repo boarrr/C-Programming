@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int ages[5];
  	int sum = 0;

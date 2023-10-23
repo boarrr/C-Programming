@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int userNum;
   char numWord[10][10] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};

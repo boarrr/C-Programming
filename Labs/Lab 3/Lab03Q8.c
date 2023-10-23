@@ -8,7 +8,7 @@
 
 #define SIZE 3 // Number of inputs from user
 
-int main()
+int main(void)
 {
   float numbers[SIZE];
   float sum, average;

@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int userInput = 0;
   int counter = 0;

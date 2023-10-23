@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   short num = 10;
 

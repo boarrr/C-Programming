@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int userNum;
   char weekDays[7][10] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};

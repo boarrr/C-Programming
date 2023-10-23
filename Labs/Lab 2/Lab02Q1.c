@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int maxInt = 5;
   int sumInt = 0;

@@ -8,7 +8,7 @@
 
 #define SIZE 3 // Size of the array
 
-int main()
+int main(void)
 {
   float nums[SIZE];
 

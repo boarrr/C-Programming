@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int bpmAverage = 75;
   short age;

@@ -8,7 +8,7 @@
 
 void fib(int n);
 
-int main()
+int main(void)
 {
   int term = 10;
 

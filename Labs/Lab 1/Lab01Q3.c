@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
 	printf("Ryan Pitman\n25 Kellys Court\nDublin 1\n25/09/2023\n");
 

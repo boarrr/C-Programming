@@ -7,7 +7,7 @@
 // Symbolic name(s) are always listed below the last #include file
 #define SIZE 10
 
-int main()
+int main(void)
 {
  	int ages[SIZE];
  	int sum = 0;

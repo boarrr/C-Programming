@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
 	int var1 = 13;
 	float var2 = 2.5;

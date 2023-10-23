@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   int operation1, operation2, operation3;
   int operation4, operation5, operation6;

@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   float height, width, length, radius;
   float volume, areaBox, areaCircle;

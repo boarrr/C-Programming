@@ -4,7 +4,7 @@ Program to demonstrate the if..else statement
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   float bank_balance = 0;
 

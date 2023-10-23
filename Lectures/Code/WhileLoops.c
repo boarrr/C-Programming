@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
   float num = 1;
   float total = 0;

@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 
-int main() 
+int main(void) 
 {
   float bank_balance = 0; 
 

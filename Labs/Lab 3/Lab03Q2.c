@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   char char1 = ' ';
   char char2 = ' ';

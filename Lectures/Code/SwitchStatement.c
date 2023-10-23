@@ -3,7 +3,7 @@
 */
 #include <stdio.h>
 
-int main()
+int main(void)
 {
  	char oper;
  	float num1, num2, answer = 0;
