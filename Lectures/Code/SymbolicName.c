@@ -64,7 +64,7 @@ int main(void)
  	// cast the variable sum to be a float just for this line of code
  	average = (float)sum / SIZE;
 
- 	printf("\n\nThe average age is %.1f", average);
+ 	printf("\n\nThe average age is %.1f\n", average);
   
   return 0;
 
