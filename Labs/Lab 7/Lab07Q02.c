@@ -26,24 +26,17 @@ int main(void)
     }
   }
 
-  // Display the contents of the array
+  // Preset the lowest and highest elements of the array
+  int lowest = array[0][0], highest = array[0][0];
+
+  // Display the contents of the array, whilst calculating the lowest and highest elements for efficiency
   printf("\nContents of the array: \n");
   for (int i = 0; i < ROWS; i++)
   {
     for (int j = 0; j < COLS; j++)
     {
       printf("%d ", array[i][j]);
-    }
-    printf("\n");
-  }
 
-  // Calculate the lowest and highest elements of the array
-  int lowest = array[0][0], highest = array[0][0];
-
-  for (int i = 0; i < ROWS; i++)
-  {
-    for (int j = 0; j < COLS; j++)
-    {
       // If the number at the current index is lower, make it lowest
       if (array[i][j] < lowest)
       {
@@ -55,6 +48,7 @@ int main(void)
         highest = array[i][j];
       }
     }
+    printf("\n");
   }
 
   // Display the lowest and highest values
