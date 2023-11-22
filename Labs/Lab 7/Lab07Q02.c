@@ -13,6 +13,7 @@ int main(void)
 {
   int array[ROWS][COLS] = {0};
   float average = 0;
+  int lowest, highest;
 
 
   // Take in input for the array, summing it up for future calculations
@@ -27,7 +28,7 @@ int main(void)
   }
 
   // Preset the lowest and highest elements of the array
-  int lowest = array[0][0], highest = array[0][0];
+  lowest = array[0][0], highest = array[0][0];
 
   // Display the contents of the array, whilst calculating the lowest and highest elements for efficiency
   printf("\nContents of the array: \n");
