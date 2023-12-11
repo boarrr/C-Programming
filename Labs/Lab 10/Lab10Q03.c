@@ -15,6 +15,11 @@ int main(void)
   float* arr = malloc(SIZE * sizeof(float));
   float* average = malloc(sizeof(float));
 
+  if (arr == NULL || average == NULL)
+  {
+    printf("Error allocating memory\n");
+    return 0;
+  }
 
   printf("Enter %d floating point numbers:\n", SIZE);
 

@@ -16,23 +16,33 @@ int main(void)
   float average = 0;
 
 
-  printf("Enter %d floating point numbers:\n", SIZE);
-
-  // Take input for array
-  for (int i = 0; i < SIZE; i++)
+  if (arr == NULL)
   {
-    scanf("%f", arr + i);
+    printf("Error allocating memory\n");
+    return 0;
   }
-
-  // Calculate average of array
-  for (int i = 0; i < SIZE; i++)
+  else 
   {
-    average += *(arr + i);
-  }
-  average /= SIZE;
+    printf("Enter %d floating point numbers:\n", SIZE);
 
-  // Display the average
-  printf("Average: %.2f\n", average);
+    // Take input for array
+    for (int i = 0; i < SIZE; i++)
+    {
+      scanf("%f", arr + i);
+    }
+
+    // Calculate average of array
+    for (int i = 0; i < SIZE; i++)
+    {
+      average += *(arr + i);
+    }
+    average /= SIZE;
+
+    // Display the average
+    printf("Average: %.2f\n", average);
+
+    free(arr);
+  }
 
   return 0;
 }

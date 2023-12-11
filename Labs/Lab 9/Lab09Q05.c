@@ -11,21 +11,19 @@
 int main(void)
 {
   float array1[SIZE], array2[SIZE];
-  float* ptr1 = array1;
-
 
   printf("Enter %d floating point numbers:\n", SIZE);
 
   // Take input for array1
   for (int i = 0; i < SIZE; i++)
   {
-    scanf("%f", ptr1 + i);
+    scanf("%f", array1 + i);
   }
 
   // Copy array1 into array2
   for (int i = 0; i < SIZE; i++)
   {
-    *(array2 + i) = *(ptr1 + i);
+    *(array2 + i) = *(array1+ i);
   }
 
   // Display contents of array2
