@@ -1,0 +1,41 @@
+#include <SDL.h>
+#include <SDL_image.h>
+#include "structs.h"
+#include "defs.h"
+
+void initWindow(void)
+{
+  int rendererFlags, windowFlags;
+ 
+  rendererFlags = SDL_RENDERER_ACCELERATED;
+  windowFlags = 0;
+
+  IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
+
+  if (SDL_Init(SDL_INIT_VIDEO) < 0)
+  {
+    printf("SDL could not intialise! SDL_Error: %s\n", SDL_GetError());
+    exit(1);
+  }
+
+
+  app.window = SDL_CreateWindow("Rooty Tooty Point and Shooty", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, windowFlags);
+
+
+  if (!app.window)
+  {
+    printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
+    exit(1);
+  }
+
+
+  SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
+
+  app.renderer = SDL_CreateRenderer(app.window, -1, rendererFlags);
+
+  if (!app.renderer)
+  {
+    printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
+    exit(1);
+  }
+}

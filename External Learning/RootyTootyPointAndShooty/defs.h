@@ -1,0 +1,5 @@
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+#define SPEED 10
+#define PLAYER_WIDTH 128
+#define BULLET_SPEED 15
