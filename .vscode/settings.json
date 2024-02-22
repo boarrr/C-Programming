@@ -1,7 +1,0 @@
-{
-  "files.associations": {
-    "ios": "c",
-    "sdl.h": "c",
-    "sdl_mixer.h": "c"
-  }
-}
