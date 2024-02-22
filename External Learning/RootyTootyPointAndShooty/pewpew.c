@@ -6,20 +6,29 @@
 #include "structs.h"
 #include "initialise.c"
 #include "inputs.c"
+#include "enemy.c"
 #include "draw.c"
+
 
 App app;
 Entity player;
 Entity bullet;
+Entity enemy;
+
+Mix_Chunk *sounds[NUM_SOUNDS];
 
 int main(void)
 {
   memset(&app, 0, sizeof(App));
   memset(&player, 0, sizeof(Entity));
   memset(&bullet, 0, sizeof(Entity));
+  memset(&enemy, 0, sizeof(Entity));
   
   // Initialise the window
   initWindow();
+
+  // Initialise the sound
+  initSound();
 
   // Load the background texture
   app.background = loadTexture("Assets/space.jpeg");
@@ -27,10 +36,16 @@ int main(void)
   // Load the player texture and set the player's position
   player.x = (SCREEN_WIDTH / 2) - 100;
   player.y = (SCREEN_HEIGHT) - 150;
+  player.health = 1;
   player.texture = loadTexture("Assets/player.png");
 
   // Load the bullet texture
   bullet.texture = loadTexture("Assets/bullet.png");
+
+  // Load the enemy texture
+  enemy.texture = loadTexture("Assets/meteor.png");
+  enemy.health = 0;
+  
 
   // Clean up when the program exits
   atexit(cleanup);
@@ -40,13 +55,25 @@ int main(void)
   {
     prepareScene();
 
-    getInput();
+    getInput(); 
 
-    blit(player.texture, player.x, player.y, 0);
+    draw(player.texture, player.x, player.y, 0, PLAYER_WIDTH, PLAYER_HEIGHT);
 
     if (bullet.health > 0)
     {
-      blit(bullet.texture, bullet.x, bullet.y, -90);
+      draw(bullet.texture, bullet.x, bullet.y, -90, BULLET_WIDTH, BULLET_HEIGHT);
+    }
+
+    spawnEnemy();
+
+    if (enemy.health > 0)
+    {
+      draw(enemy.texture, enemy.x, enemy.y, 0, ENEMY_WIDTH, ENEMY_HEIGHT);
+    }
+
+    if (player.health == 0)
+    {
+      break;
     }
 
     presentScene();

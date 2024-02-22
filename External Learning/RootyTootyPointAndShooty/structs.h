@@ -1,4 +1,6 @@
 #include <SDL.h>
+#include <SDL_mixer.h>
+#include "defs.h"
 #pragma once
 
 typedef struct 
@@ -23,4 +25,7 @@ typedef struct
 
 extern App app;
 extern Entity player;
+extern Entity enemy;
 extern Entity bullet;
+
+extern Mix_Chunk *sounds[NUM_SOUNDS];

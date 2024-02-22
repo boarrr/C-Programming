@@ -29,7 +29,6 @@ void cleanup(void)
   SDL_Quit();
 }
 
-
 SDL_Texture *loadTexture(char *file)
 {
   SDL_Texture *texture;
@@ -48,14 +47,15 @@ SDL_Texture *loadTexture(char *file)
 }
 
 
-void blit(SDL_Texture *texture, int x, int y, int angle)
+void draw(SDL_Texture *texture, int x, int y, int angle, int w, int h)
 {
   SDL_Rect dest;
 
   dest.x = x;
   dest.y = y;
 
-  dest.w = dest.h = PLAYER_WIDTH;
+  dest.w = w;
+  dest.h = h;
 
   SDL_QueryTexture(texture, NULL, NULL, NULL, NULL);
 

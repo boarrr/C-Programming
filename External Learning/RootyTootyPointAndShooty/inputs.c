@@ -1,4 +1,7 @@
 #include <SDL.h>
+#include "structs.h"
+#include "defs.h"
+#include "sounds.c"
 
 void doKeyDown(SDL_KeyboardEvent*);
 void doKeyUp(SDL_KeyboardEvent*);
@@ -65,6 +68,8 @@ void getInput(void)
     bullet.x = player.x;
     bullet.y = player.y;
     bullet.health = 1;
+
+    playSound(0, 0);
   }
 
   // Move the bullet
@@ -75,6 +80,16 @@ void getInput(void)
     if (bullet.y < 0)
     {
       bullet.health = 0;
+    }
+
+    // Check for a collision between the bullet and the enemy
+    if (bullet.x < enemy.x + ENEMY_WIDTH && bullet.x + BULLET_WIDTH > enemy.x)
+    {
+      if (bullet.y < enemy.y + ENEMY_HEIGHT && bullet.y + BULLET_HEIGHT > enemy.y)
+      {
+        bullet.health = 0;
+        enemy.health = 0;
+      }
     }
   }
 }
@@ -100,7 +115,14 @@ void doKeyDown(SDL_KeyboardEvent *event)
 
       case SDL_SCANCODE_SPACE:
       {
+        Mix_PlayChannel(-1, sounds[0], 0);
         app.shoot = 1;
+        break;
+      }
+
+      case SDL_SCANCODE_ESCAPE:
+      {
+        exit(0);
         break;
       }
 
