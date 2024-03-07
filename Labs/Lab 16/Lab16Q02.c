@@ -53,7 +53,7 @@ int countIs(char* str)
     {
       if (i == 0 || str[i - 1] == ' ') // Is "is" at the start or after a space?
       {
-        if (str[i] == 'i' && str[i + 1] == 's' && (str[i + 2] == '\0' || str[i + 2] == ' '|| str[i + 2] == '\n')) // Is it the standalone "is"?
+        if (str[i] == 'i' && str[i + 1] == 's' && (str[i + 2] == ' '|| str[i + 2] == '\n')) // Is it the standalone "is"?
         {
           count++; // If so, increment count
         }
